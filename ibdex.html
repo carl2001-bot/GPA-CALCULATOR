@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USIU-Africa GPA Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="gpa-calculator">
+        <h1>USIU-Africa GPA Calculator</h1>
+        <p class="subtitle">Estimate your semester GPA before official results are released</p>
+        
+        <form id="gpaForm">
+            <div class="course-inputs" id="courseInputs">
+                <!-- Initial 3 course rows -->
+                <div class="course-row">
+                    <div class="input-group">
+                        <label for="course1">Course 1</label>
+                        <input type="text" id="course1" placeholder="Enter course name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="grade1">Grade</label>
+                        <select id="grade1" required>
+                            <option value="">Select grade</option>
+                            <option value="4">A</option>
+                            <option value="3">B</option>
+                            <option value="2">C</option>
+                            <option value="1">D</option>
+                            <option value="0">F</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="course-row">
+                    <div class="input-group">
+                        <label for="course2">Course 2</label>
+                        <input type="text" id="course2" placeholder="Enter course name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="grade2">Grade</label>
+                        <select id="grade2" required>
+                            <option value="">Select grade</option>
+                            <option value="4">A</option>
+                            <option value="3">B</option>
+                            <option value="2">C</option>
+                            <option value="1">D</option>
+                            <option value="0">F</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="course-row">
+                    <div class="input-group">
+                        <label for="course3">Course 3</label>
+                        <input type="text" id="course3" placeholder="Enter course name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="grade3">Grade</label>
+                        <select id="grade3" required>
+                            <option value="">Select grade</option>
+                            <option value="4">A</option>
+                            <option value="3">B</option>
+                            <option value="2">C</option>
+                            <option value="1">D</option>
+                            <option value="0">F</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="buttons">
+                <button type="button" id="addCourseBtn" class="secondary-btn">+ Add Another Course</button>
+                <button type="submit" id="calculateBtn">Calculate GPA</button>
+            </div>
+        </form>
+        
+        <div class="result-container" id="resultContainer">
+            <h2>Your GPA Result</h2>
+            <div class="gpa-display" id="gpaDisplay">-</div>
+            <p class="gpa-scale">USIU-Africa GPA Scale: A=4, B=3, C=2, D=1, F=0</p>
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
